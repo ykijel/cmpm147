@@ -32,7 +32,7 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 2 - Living Impressions</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
@@ -42,20 +42,25 @@
                     <button id="fullscreen">Fullscreen</button>
                 </div>
 			</div>
+			<div class="minor-section">
+                <div class="image-wrapper">
+                    <img src="https://forums.terraria.org/index.php?attachments/n-1-png.31583/">
+                </div>
+			</div>
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>In this experiment, I was trying to recreate the landscape from Terraria shown in the image above. I began with simple design choices, like using lines with noise (to simulate curviness) to separate the layers (water, forest, grassland, etc.) and moved on to more complex ideas like making the clouds move and loop.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I put all the static images that needed to be drawn inside the setup function. I made backgrounds and drew the mountains, grasslands, and trees using various shapes. These elements are only drawn once and remain static in the animation, but will appear different each time the animation is reloaded. In the draw function, I continuously redraw the top portion of the canvas where the clouds are located. This gives the illusion of clouds moving across the sky. To optimize the performance of the animation, I only redraw the background behind the clouds, that way I do not have to redraw all the static elements as well.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>I had a few main difficulties throughout my time working on this project. Since this is my first time doing programmer art, I had to learn how to place lines in specific positions, how to use noise to simulate curviness, and how to color in the different layers properly. Additionally, figuring out how to simulate movement with the clouds was challenging. I resorted to not redrawing the whole background for optimization purposes, but it also helped with making the clouds move properly. Overall, I'm pretty happy with how the project turned out. Although I did end up almost running out of time, I think what I created with my limited knowledge looks decently similar to the Terraria image, and I am satisfied with that.</p>
 			</div>
 
 		</section>
