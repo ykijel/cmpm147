@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 3 - Alternate World</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -26,22 +26,41 @@
 	<script type="text/javascript" src="./js/project.js" DEFER></script>
 	<!-- Use me for a p5.js project -->
 	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+	
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 3 - Alternate World</h1>
 
-			<div class="minor-section">
-				<div id="canvas-container">
-					<!-- canvas will be added here -->
+
+            <div class="minor-section">
+				<div id="p5sketch1">
+					<button id="reseedButton">reseed</button>
+					<span id="seedReport"></span>
+					<hr />
+					<span id="canvas-container1">
+						<!-- canvas for sketch 1 will be added here -->
+					</span>
+					<textarea cols="20" rows="20" id="asciiBox" style="opacity: 0.5; letter-spacing: 1ex; width: 320px; margin: 10px; font-family: monospace;"></textarea>
+				</div>
+				<hr />
+				<div id="p5sketch2">
+					<button id="reseedButton2">reseed</button>
+					<span id="seedReport2"></span>
+					<hr />
+					<span id="canvas-container2">
+						<!-- canvas for sketch 2 will be added here -->
+					</span>
+					<textarea cols="20" rows="20" id="asciiBox2" style="opacity: 0.5; letter-spacing: 1ex; width: 320px; margin: 10px; font-family: monospace;"></textarea>
 				</div>
                 <div class="fullscreen-box">
                     <button id="fullscreen">Fullscreen</button>
                 </div>
-			</div>
+            </div>
+        </section>
 
 			<div class="minor-section">
 				<h2>Description</h2>
