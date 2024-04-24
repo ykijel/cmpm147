@@ -200,7 +200,7 @@ var myp5 = new p5((d) => {
     for (let yPos = 0; yPos < gridData.length; yPos++) {
       for (let xPos = 0; xPos < gridData[yPos].length; xPos++) {
         if (gridData[yPos][xPos] == "r") {
-          placeTile(xPos, yPos, (d.millis() / 500) % 3, 18); // Animated rock
+          placeTile(xPos, yPos, (d.millis() / 1000) % d.random(1,2), 18); // Animated rock
         } else if (gridData[yPos][xPos] == "2") {
           placeTile(xPos, yPos, d.random(1, 3), 23);
           drawContext(gridData, xPos, yPos, "2", 14, 21);
@@ -233,7 +233,7 @@ var myp5 = new p5((o) => {
     seed2 = (seed2 | 0) + 1109;
     o.randomSeed(seed2);
     o.noiseSeed(seed2);
-    o.select("#seedReport").html("seed " + seed2);
+    o.select("#seedReport2").html("seed " + seed2);
     regenerateGrid2();
   }
   
@@ -331,7 +331,7 @@ var myp5 = new p5((o) => {
     for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[i].length; j++) {
         if (gridCheck(grid, i, j, ".")) {
-          placeTile2(i, j, 0, 3);
+          placeTile2(i, j, (3 * o.pow(o.random(), g)), 3);
         } else if (gridCheck(grid, i, j, ":")) {
           placeTile2(i, j, (4 * o.pow(o.noise(t / 10, i, j / 4 + t), 2)) | 0, 14);
           drawContext2(grid, i, j, ":", 9, 3, true);
