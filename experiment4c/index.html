@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4 - ProcGen/Infinite Worlds</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+	<!-- Use me for a JavaScript OOP Project -->
+	<script type="text/javascript" src="./js/project.js" DEFER></script>
+	<!-- Use me for a p5.js project -->
+	<!-- <script type="text/javascript" src="./js/sketch.js" DEFER></script> -->
+
+	<script type="text/javascript" src="./js/xxhash.min.js" DEFER></script>
+	<script type="text/javascript" src="./js/engine.js" DEFER></script>
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - ProcGen/Infinite Worlds</h1>
+
+			<div class="minor-section">
+				<div id="container">
+					<!-- canvas will be added here -->
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>This infinite generator creates a grid of tiles, representing a simple terrain with grass and water biomes. The grass biomes have randomly generated darker tiles on them, representing corruption of the land. By clicking and holding down on these tiles, you can remove them and cleanse the land. The water biomes display a bouncing wave effect, creating a sense of movement.</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>The code utilizes the p5.js library for rendering the visuals. It defines functions for setting up the world, calculating tile dimensions, and drawing tiles based on their biome (grass or water). The p3_removeDark function is responsible for removing the dark tiles from a clicked tile and its neighbors by modifying the darkTiles object. The p3_drawTile function renders each tile based on its biome, using noise functions to determine the grass or water state and applying the appropriate color and effects. </p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>Overall, I am definitely satisfied with the way this generator ended up. The bounciness of the ocean tiles looks great next to the static ground tiles. The minigame aspect of it is also neat, and makes for an environment that is more than just fun to look at. If we had additional time, we would have added more details and possibly other randomly generated biomes to make the infinite landscape more rich.</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
